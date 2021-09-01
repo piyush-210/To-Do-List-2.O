@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="TODOLIST.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 id="Header" >STUFF I NEED TO DO</h1>
+        </div>
+        <div class="row">
+            <!-- --------------left ------------- -->
+
+            <div class="col-lg-4 col-sm-6 col-12" id="my-lists">
+                <h5 id="list-header">My Lists</h5>
+                <ul class="list">
+                    <li id="li-1" class="active-list">YouTube</li>
+                    <li id="li-2" >Work</li>
+                    <li id="li-3" >Start-Up</li>
+                    <li id="li-4" >Others</li>
+                </ul>
+
+                <div class="add-list-container">
+                    <button class="btn btn-list" onclick="listadding()">+</button>
+                    <input type="text" spellcheck="false" placeholder="new list name" name="new-list" id="add-new-list">
+                </div>
+
+            </div>
+
+            <!-- --------------middle ----------------- -->
+
+            <div class="mx-auto col-lg-8 col-sm-6 col-12 " id="todo-list">
+
+                <!-- ----------TASK-HEADER ------------- -->
+
+                <div class="todo-header">
+                  <h3 class="list-title">YouTube</h3>
+                  <p class="task-count">3 tasks remaining</p>
+                </div>
+          
+                <!-- ------------TASK_BODY --------- -->
+
+                <div class="todo-body">
+                  <div class="tasks" id="main_tasks">
+                    <div class="task">
+                      <input 
+                        type="checkbox"
+                        id="task-1"
+                      />
+                      <label for="task-1">
+                        <span class="custom-checkbox"></span>
+                        record todo list video
+                      </label>
+                    </div>
+                    <!-- /task-1 -->
+          
+                    <div class="task">
+                        <input 
+                          type="checkbox"
+                          id="task-2"
+                        />
+                        <label for="task-2">
+                          <span class="custom-checkbox"></span>
+                          another task
+                        </label>
+                      </div>
+                      <!-- /task-2 -->
+          
+                      <div class="task">
+                        <input 
+                          type="checkbox"
+                          id="task-3"
+                        />
+                        <label for="task-3">
+                          <span class="custom-checkbox"></span>
+                          a third task
+                        </label>
+                      </div>
+                        <!-- /task-3 -->
+                  </div>
+                  
+                </div>
+                  <!-- ---------------TASK CREATOR ---------------- -->
+                  
+                  <div class="new-task-creator">
+                    <button class="btn btn-task" aria-label="create new task" onclick="taskadding()">+</button>
+                    <input 
+                    type="text"
+                    class="new task"
+                    placeholder="enter new task"
+                    aria-label="new task name"
+                    id="input-task"
+                    spellcheck="false"
+                    />
+                  </div>
+                  
+                  <!-- ----------------- DELETE SECTION -------------- -->
+
+                <div class="delete-stuff">
+                  <button class="btn delete" id="cleartask">Clear completed tasks</button>
+                  <button class="btn delete" id="deletelist">Delete list</button>
+                </div>
+            </div>
+
+            <!-- -----------------right---------------- -->
+        </div>
+    </div>
+
+    <script src="TODOLIST.js"></script>
+
+</body>
+</html>
